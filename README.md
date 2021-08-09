@@ -1,2 +1,2 @@
-# JSSiteTemplate
-Site Template for JS projects
+# Backwords
+A Javascript project reversing a string
