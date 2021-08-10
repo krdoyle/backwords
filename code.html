@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Kevin Doyle</title>
+    <title>BackWords: A Coding Project by Kevin Doyle</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,7 +32,7 @@
     <!-- Navigation Section -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/Kevin Doyle_Brand_W.svg" class="d-inline-block align-text-center" width="30"> APP NAME - CHANGE!!</a>
+            <a class="navbar-brand" href="#"><img src="img/Kevin Doyle_Brand_W.svg" class="d-inline-block align-text-center" width="30"> BACKWORDS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,20 +63,51 @@
     <!-- Main Section -->
     <main class="flex-shrink-0">
         <div class="container py-4 px-5 mt-5">
-            <h2 class="border-1 boder-bottom border-dark">The Code for APP NAME</h2>
-            <div class="row row-cols-1 row-cols-lg-2">
+            <h2 class="border-1 boder-bottom border-dark">Code for BACKWORDS</h2>
+            <div class="row row-cols-1 row-cols-lg-2">s
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                            function HelloWorld(){
-                                alert("Hello World!!");
-                            }
+                        // Get user input - string (controller)
+                        function getValue() {
+                        
+                            document.getElementById("alert").classList.add("invisible");
+                        
+                            let userString = document.getElementById("userString").value;
+                            let revString = reverseString(userString);
+                        
+                            displayString(revString);
+                        }
+                        
+                        // reverse the string (logic)
+                        function reverseString(userString) {
+                        
+                            let revString = [];
+                        
+                            //reverse a string in a for loop
+                            for (let i = userString.length - 1; i >= 0; i--) {
+                                revString += userString[i];
+                            } 
+
+                            return revString;
+                        }
+                        
+                        // display reversed string on screen (view)
+                        function displayString(revString) {
+                        
+                            document.getElementById("msg").innerHTML = `Your string reversed is: ${revString}`;
+                            document.getElementById("alert").classList.remove("invisible");
+                        }
                     </code>
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structured in one function.</p>
-                    <h5>Function Title</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World!!"</p>
+                    <p>The Code is structured in three functions.</p>
+                    <h5 class="pt-3">getValue</h5>
+                    <p>This is the controller function. It first sets the alert/result to be invisible. Then grabs the user inputted string value. Then passes that value to the revString function. And, finally calls the function displayString to display the reversed string. </p>
+                    <h5 class="pt-3">reverseString</h5>
+                    <p>Uses a for loop to iterate over the user string in reverse and creates a new array of the reversed characters - revString.</p>
+                    <h5 class="pt-3">displayString</h5>
+                    <p>Sets the onscreen alert to display after being populated by the reversed string value.</p>
                 </div>
             </div>
         </div>

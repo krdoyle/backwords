@@ -1,2 +1,2 @@
-# Backwords
-A Javascript project reversing a string
+# Backwords - a play on words
+A Javascript project reversing a string.

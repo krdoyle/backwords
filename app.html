@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Kevin Doyle</title>
+    <title>Backwords: A Coding Project by Kevin Doyle</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,7 +29,7 @@
     <!-- Navigation Section -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/Kevin Doyle_Brand_W.svg" class="d-inline-block align-text-center" width="30"> APP NAME - CHANGE!!</a>
+            <a class="navbar-brand" href="#"><img src="img/Kevin Doyle_Brand_W.svg" class="d-inline-block align-text-center" width="30"> BACKWORDS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,8 +59,30 @@
 
     <!-- Main Section -->
     <main class="flex-shrink-0">
-        <div class="container">
-
+        <div class="container mt-4">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col mb-4">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">BACKWORDS: A Coding Project</h1>
+                    <h4 class="lead">Backwords is a JavaScript coding exercise using arrays. Enter a string and push the button to see it in reverse.</h4>
+                </div>
+                <div class="col">
+                    <h5 class="border-1 border-bottom">Enter A String To Reverse</h5>
+                    <form class="row gx-3 gy-2" >
+                        <div class="col">
+                            <input id="userString" type="text" class="form-control" placeholder="Enter a String" aria-label="Enter A String">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-outline-dark" type="button" id="submit">SUBMIT</button>
+                        </div>
+                        <div class="alert mt-5 invisible fade show alert-info" id="alert" role="alert">
+                            <h5 class="border-1 border-bottom">Your string is reversed...</h5>
+                            <p class="mb-0" id="msg">
+                                <!-- Insert message goes here -->
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -100,5 +122,8 @@
     </script>
     <!--Main JS-->
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("submit").addEventListener("click", getValue);
+    </script>
 </body>
 </html>
